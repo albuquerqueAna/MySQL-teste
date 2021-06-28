@@ -1,0 +1,42 @@
+// total de cursos com tantas aulas
+select totaulas, count(*) from cursos
+group by totaulas
+order by totaulas;
+
+
+//quantos cursos tiveram em cada ano
+select ano, count(*) from cursos
+group by ano
+order by ano;
+
+
+// having usa mesmo campo do groupBy
+select ano, count(*) from cursos
+group by ano
+having count(ano) >= 5
+order by ano;
+
+
+// having com select dentro
+select carga, count(*) from cursos
+where ano > '2015'
+group by carga
+having carga > (select avg (carga) from cursos);
+
+
+//exercicio 1
+select profissao, count(*) from gafanhotos
+group by profissao
+order by profissao;
+
+// exercicio 2
+select sexo,count(*) from gafanhotos
+where nascimento > '2005-01-01'
+group by sexo;
+
+//where vem antes do groupBy e having
+select nacionalidade, count(*) from gafanhotos
+where nacionalidade <> 'Brasil'
+group by nacionalidade 
+having count(*) > 3
+order by nacionalidade;
