@@ -1,0 +1,9 @@
+insert into pessoas values 
+(default, 'Douglas', '2002-08-20', 'M', '69', '1.69', default),
+(default, 'Camila', '2010-06-09', 'F', '38', '1.56', 'Paraguai'),
+(default, 'Jorge', '1979-10-05', 'M', '79', '1.80', 'Peru');
+
+insert into pessoas
+( nome, nascimento, sexo, peso, altura, nacionalidade)
+values 
+('Ana', '2002-07-29', 'F', '49', '1.57', 'Brasil');
