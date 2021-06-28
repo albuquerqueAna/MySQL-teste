@@ -1,0 +1,60 @@
+
+select * from cursos 
+where ano = '2016'
+order by nome;
+
+//operadores maior, menor, igual
+select * from cursos 
+where ano<= 2014
+order by ano, nome;
+
+
+//operador BETWEEN
+select nome, descricao, totaulas from cursos
+where totaulas between 20 and 50
+order by ano, nome;
+
+
+//operador IN
+select nome, descricao, ano from cursos
+where ano in (2014, 2015, 2016)
+order by ano, nome;
+
+
+//operadores juntos
+select * from cursos
+where carga > '30' and ano in (2016, 2019)
+order by nome, ano;
+
+
+//operador LIKE
+select * from cursos
+where nome like 'c%'
+order by nome, ano;
+
+select * from gafanhotos
+where nome like '%ana%'
+order by nome;
+
+//select max
+
+select max(altura) from gafanhotos
+where sexo = 'M' and nacionalidade = 'Brasil'
+order by nome, sexo, nacionalidade;
+
+
+//media de valores (avg)
+select avg(peso) from gafanhotos
+
+
+// minimo (min)
+select min(peso) from gafanhotos
+where sexo = 'F' and nascimento between '1990/01/01' and '2000/12/31' and nacionalidade <> 'Brasil';
+// <> usado para quando você quer achar algo fora da palavra seguinte
+
+
+//contar (count)
+select count(altura) from gafanhotos
+where sexo = 'F' and altura > '1.90'
+
+select distinct nacionalidade from gafanhotos;
