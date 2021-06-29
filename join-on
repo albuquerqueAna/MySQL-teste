@@ -2,4 +2,9 @@
 
 select gafanhotos.nome, cursos.nome, cursos.ano
 from gafanhotos join cursos
+//chave primaria = chave estrangeira
 on cursos.idcurso = gafanhotos.cursopreferido;
+// sempre que utilizar join deve-se utilizar on
+
+
+
