@@ -1,0 +1,5 @@
+// juntando duas colunas com join e on
+
+select gafanhotos.nome, cursos.nome, cursos.ano
+from gafanhotos join cursos
+on cursos.idcurso = gafanhotos.cursopreferido;
