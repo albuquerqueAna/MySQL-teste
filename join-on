@@ -8,3 +8,17 @@ on cursos.idcurso = gafanhotos.cursopreferido;
 
 
 
+// função as para encurtar nome da table
+select g.nome, c.nome, c.ano
+from gafanhotos as g join cursos as c
+on c.idcurso = g.cursopreferido;
+
+// right outer join = dá preferência à coulna da direita 
+select g.nome, c.nome, c.ano
+from gafanhotos as g right join cursos as c
+on c.idcurso = g.cursopreferido
+
+// left outer join = dá preferência à coulna da esquerda
+select g.nome, c.nome, c.ano
+from gafanhotos as g left join cursos as c
+on c.idcurso = g.cursopreferido
