@@ -18,8 +18,11 @@ select g.nome, c.nome, c.ano
 from gafanhotos as g right join cursos as c
 on c.idcurso = g.cursopreferido
 
-// left outer join = dá preferência à coulna da esquerda
+// left outer join = dá preferência à coluna da esquerda
 select g.nome, c.nome, c.ano
 from gafanhotos as g left join cursos as c
 on c.idcurso = g.cursopreferido
 // pesquisar por arquivo "Left e Right diferença" caso esqueça.
+
+
+
